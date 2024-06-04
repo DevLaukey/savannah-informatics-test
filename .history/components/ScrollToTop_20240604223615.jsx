@@ -1,9 +1,8 @@
-"use client";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { ArrowUpToLine } from "lucide-react";
 
-const ScrollToTop = () => {
+export const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {

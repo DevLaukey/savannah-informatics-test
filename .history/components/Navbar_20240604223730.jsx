@@ -16,27 +16,28 @@ import { Button, buttonVariants } from "./ui/button";
 import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "./mode-toggle";
 import { LogoIcon } from "./Icons";
-import { useRouter } from "next/navigation";
 
 const routeList = [
-  {
-    href: "#hero",
-    label: "Hero",
-  },
   {
     href: "#features",
     label: "Features",
   },
-
+  {
+    href: "#testimonials",
+    label: "Testimonials",
+  },
+  {
+    href: "#pricing",
+    label: "Pricing",
+  },
+  {
+    href: "#faq",
+    label: "FAQ",
+  },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navigation = useRouter();
-  const navToLogin = () => {
-    navigation.push("/auth");
-  }
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -84,7 +85,7 @@ const Navbar = () => {
                       {label}
                     </a>
                   ))}
-                  <Button onClick={navToLogin}>
+                  <Button>
                     Get Started
                     <ChevronRight className="mr-2 h-4 w-4" />
                   </Button>
@@ -110,7 +111,7 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <Button onClick={navToLogin}>
+            <Button>
               Get Started
               <ChevronRight className="mr-2 h-4 w-4" />
             </Button>

@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       {/* Hero */}
-      <section id="hero" className="relative overflow-hidden pt-14 lg:pt-20">
+      <div className="relative overflow-hidden pt-14 lg:pt-20">
         <div className="container">
           <div className="max-w-2xl text-center mx-auto">
             <main className="text-3xl md:text-5xl font-bold">
@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       {/* End Hero */}
     </>
   );

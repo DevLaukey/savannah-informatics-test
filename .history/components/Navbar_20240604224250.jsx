@@ -35,7 +35,7 @@ const Navbar = () => {
 
   const navigation = useRouter();
   const navToLogin = () => {
-    navigation.push("/auth");
+    navigation.push("/auth/login");
   }
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
