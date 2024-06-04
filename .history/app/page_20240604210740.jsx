@@ -4,6 +4,7 @@ import Hero from "@/components/landing-page/Hero";
 import HowItWorks from "@/components/landing-page/HowItWorks";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Button } from "@/components/ui/button";
 
 
 // this is the landing page
