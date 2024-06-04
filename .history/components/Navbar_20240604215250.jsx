@@ -49,7 +49,7 @@ const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              Album | Lib
+              Album |Lib
             </a>
           </NavigationMenuItem>
 

@@ -1,3 +1,4 @@
+
 const Hero = () => {
   return (
     <>
@@ -22,7 +23,7 @@ const Hero = () => {
             </main>
 
             <p className="mt-3 text-xl text-muted-foreground">
-              Application is developed using Nextjs and Tailwind CSS{" "}
+              Nano-computing breaks barriers, unlocking new tech horizons.
             </p>
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">

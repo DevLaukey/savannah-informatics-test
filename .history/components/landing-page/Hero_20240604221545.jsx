@@ -1,3 +1,4 @@
+
 const Hero = () => {
   return (
     <>
@@ -8,21 +9,21 @@ const Hero = () => {
             <main className="text-3xl md:text-5xl font-bold">
               <h1 className="inline-block">
                 <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
-                  A-Lib
-                </span>
-                An
-              </h1>
-              Album and
+                  P.O.E.M.S
+                </span>{" "}
+                Point
+              </h1>{" "}
+              Of{" "}
               <h2 className="inline-block">
                 <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-                  User Management
-                </span>
+                  Entry Management
+                </span>{" "}
                 System
               </h2>
             </main>
 
             <p className="mt-3 text-xl text-muted-foreground">
-              Application is developed using Nextjs and Tailwind CSS{" "}
+              Nano-computing breaks barriers, unlocking new tech horizons.
             </p>
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">

@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import {
   NavigationMenu,
@@ -14,8 +14,9 @@ import {
 } from "@/components/ui/sheet";
 import { Button, buttonVariants } from "./ui/button";
 import { ChevronRight, Menu } from "lucide-react";
-import ModeToggle from "./mode-toggle";
+import ModeToggle  from "./mode-toggle";
 import { LogoIcon } from "./Icons";
+
 
 const routeList = [
   {
@@ -49,7 +50,8 @@ const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              Album | Lib
+              Album 
+            |Lib
             </a>
           </NavigationMenuItem>
 
@@ -88,7 +90,7 @@ const Navbar = () => {
                   <Button>
                     Get Started
                     <ChevronRight className="mr-2 h-4 w-4" />
-                  </Button>
+                    </Button>
                 </nav>
               </SheetContent>
             </Sheet>

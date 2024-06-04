@@ -1,3 +1,7 @@
+import { ChevronRight } from "lucide-react";
+import { HeroCards } from "./HeroCards";
+import { Button, buttonVariants } from "@/components/ui/button";
+
 const Hero = () => {
   return (
     <>
@@ -5,24 +9,11 @@ const Hero = () => {
       <div className="relative overflow-hidden py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl text-center mx-auto">
-            <main className="text-3xl md:text-5xl font-bold">
-              <h1 className="inline-block">
-                <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
-                  A-Lib
-                </span>
-                An
-              </h1>
-              Album and
-              <h2 className="inline-block">
-                <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-                  User Management
-                </span>
-                System
-              </h2>
-            </main>
-
+            <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+              Nano-Frontiers: Reshaping Tech
+            </h1>
             <p className="mt-3 text-xl text-muted-foreground">
-              Application is developed using Nextjs and Tailwind CSS{" "}
+              Nano-computing breaks barriers, unlocking new tech horizons.
             </p>
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">
