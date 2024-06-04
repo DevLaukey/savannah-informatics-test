@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       {/* Hero */}
-      <div className="relative overflow-hidden pt-14 lg:pt-20">
+      <div className="relative overflow-hidden py-24 lg:py-32">
         <div className="container">
           <div className="max-w-2xl text-center mx-auto">
             <main className="text-3xl md:text-5xl font-bold">
@@ -22,7 +22,7 @@ const Hero = () => {
             </main>
 
             <p className="mt-3 text-xl text-muted-foreground">
-              Application is developed using Nextjs and Tailwind CSS
+              Application is developed using Nextjs and Tailwind CSS{ "}
             </p>
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">
