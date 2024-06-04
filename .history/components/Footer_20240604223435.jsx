@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
 
-      <section className="container flex py-6 text-center items-center justify-evenly">
+      <section className="container flex pb-14 text-center items-center justify-center">
         <div className="col-span-full xl:col-span-2">
           <a
             rel="noreferrer noopener"
