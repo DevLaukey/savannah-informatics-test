@@ -20,21 +20,14 @@ import { LogoIcon } from "./Icons";
 
 const routeList = [
   {
-    href: "#features",
-    label: "Features",
+    href: "#about",
+    label: "About",
   },
   {
-    href: "#testimonials",
-    label: "Testimonials",
+    href: "#how-it-works",
+    label: "How It Works",
   },
-  {
-    href: "#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "#faq",
-    label: "FAQ",
-  },
+
 ];
 
 const Navbar = () => {
@@ -50,7 +43,7 @@ const Navbar = () => {
               className="ml-2 font-bold text-xl flex"
             >
               <LogoIcon />
-              ShadcnUI/React
+              Album-Lib
             </a>
           </NavigationMenuItem>
 
@@ -88,8 +81,8 @@ const Navbar = () => {
                   ))}
                   <Button>
                     Get Started
-                    <ChevronRight className="mr-2 h-4 w-4" />
-                    </Button>
+                    <ChevronRight className="mr-2 h-4 w-4" /> 
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -111,13 +104,10 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
-            <Button>
-              Get Started
-              <ChevronRight className="mr-2 h-4 w-4" />
-            </Button>
-            <ModeToggle />
-          </div>
+          <Button>
+            Get Started
+            <ChevronRight className="mr-2 h-4 w-4" /> 
+          </Button>
         </NavigationMenuList>
       </NavigationMenu>
     </header>

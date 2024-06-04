@@ -12,8 +12,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button, buttonVariants } from "./ui/button";
-import { ChevronRight, Menu } from "lucide-react";
+import { buttonVariants } from "./ui/button";
+import { Menu } from "lucide-react";
 import ModeToggle  from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 
@@ -86,10 +86,17 @@ const Navbar = () => {
                       {label}
                     </a>
                   ))}
-                  <Button>
-                    Get Started
-                    <ChevronRight className="mr-2 h-4 w-4" />
-                    </Button>
+                  <a
+                    rel="noreferrer noopener"
+                    href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+                    target="_blank"
+                    className={`w-[110px] border ${buttonVariants({
+                      variant: "secondary",
+                    })}`}
+                  >
+                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
+                    Github
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -112,10 +119,16 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <Button>
-              Get Started
-              <ChevronRight className="mr-2 h-4 w-4" />
-            </Button>
+            <a
+              rel="noreferrer noopener"
+              href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+              target="_blank"
+              className={`border ${buttonVariants({ variant: "secondary" })}`}
+            >
+              <GitHubLogoIcon className="mr-2 w-5 h-5" />
+              Github
+            </a>
+
             <ModeToggle />
           </div>
         </NavigationMenuList>

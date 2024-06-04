@@ -86,10 +86,16 @@ const Navbar = () => {
                       {label}
                     </a>
                   ))}
-                  <Button>
-                    Get Started
-                    <ChevronRight className="mr-2 h-4 w-4" />
-                    </Button>
+                  <a
+                    rel="noreferrer noopener"
+                    href="/login"
+                    target="_blank"
+                    className={`w-[110px] border ${buttonVariants({
+                      variant: "secondary",
+                    })}`}
+                  >
+                    Login
+                  </a>
                 </nav>
               </SheetContent>
             </Sheet>

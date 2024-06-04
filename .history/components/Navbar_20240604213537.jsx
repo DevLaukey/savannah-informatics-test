@@ -87,9 +87,8 @@ const Navbar = () => {
                     </a>
                   ))}
                   <Button>
-                    Get Started
-                    <ChevronRight className="mr-2 h-4 w-4" />
-                    </Button>
+                    <ChevronRight className="mr-2 h-4 w-4" /> Login with Email
+                  </Button>
                 </nav>
               </SheetContent>
             </Sheet>
@@ -111,13 +110,9 @@ const Navbar = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-2">
-            <Button>
-              Get Started
-              <ChevronRight className="mr-2 h-4 w-4" />
-            </Button>
-            <ModeToggle />
-          </div>
+          <Button>
+            <ChevronRight className="mr-2 h-4 w-4" /> Login with Email
+          </Button>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
