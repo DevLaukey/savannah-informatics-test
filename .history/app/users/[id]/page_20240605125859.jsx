@@ -37,15 +37,15 @@ function Users() {
     Promise.all([fetchUser(), fetchAlbums()]).then(() => setLoading(false));
   }, []);
 
-  console.log("Loading",userData);
+  console.log("Loading", albums,userData);
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  return <div className="flex items-center justify-center h-full">
+  return <div className="flex items-center justify-center h-3/4">
   
     {/* show the data */}
-    <UserCard userData={userData} />
+    <UserCard/>
   </div>;
 }
 

@@ -1,11 +1,13 @@
 "use client";
+import { useParams } from "next/navigation";
+import React from "react";
 
-import React, { useState, useEffect } from "react";
-import UsersDataTable from "./UsersDataTable";
-
-function Albums() {
+function Users() {
+  const { id } = useParams();
   const [users, setUsers] = useState([]);
   const [albums, setAlbums] = useState([]);
+  const [userData, setUserData] = useState({});
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,17 +42,7 @@ function Albums() {
     return <div>Loading...</div>;
   }
 
-
-  return (
-    <div className="flex flex-col justify-center items-center mt-10 mx-4">
-      <h1 className="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white mb-3">
-        Users and their Albums
-      </h1>
-      <h5 className="text-xl  mb-3 font-semibold">To view more, click on a user</h5>
-
-      <UsersDataTable users={users} albums={albums} />
-    </div>
-  );
+  return <div>Users</div>;
 }
 
-export default Albums;
+export default Users;

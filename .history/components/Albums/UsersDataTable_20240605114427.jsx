@@ -6,8 +6,8 @@ const HomePage = ({ users, albums }) => {
   };
   return (
     <div className="w-full max-w-lg relative overflow-x-auto shadow-md sm:rounded-lg">
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-200 divide-y divide-gray-200">
-        <thead className="w-full text-xs text-gray-100 dark:text-gray-200  uppercase bg-gray-50 dark:bg-gray-900 ">
+      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray200 divide-y divide-gray-200">
+        <thead className="w-full text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
             <th
               scope="col"
@@ -27,10 +27,8 @@ const HomePage = ({ users, albums }) => {
         <tbody className="w-full bg-white divide-y divide-gray-200">
           {users.map((user) => (
             <tr className=" hover:cursor-pointer w-full bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-              <td className="px-6 w-   py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                <Link className="w-full" href={`/users/${user.id}`}>
-                  {user.id}
-                </Link>
+              <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                <Link href={`/users/${user.id}`}>{user.id}</Link>
               </td>
               <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <Link href={`/users/${user.id}`}>

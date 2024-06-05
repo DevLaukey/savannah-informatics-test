@@ -1,5 +1,4 @@
 "use client";
-import UserCard from "@/components/user/UserCard";
 import { useParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
@@ -37,16 +36,12 @@ function Users() {
     Promise.all([fetchUser(), fetchAlbums()]).then(() => setLoading(false));
   }, []);
 
-  console.log("Loading",userData);
+  console.log("Loading", albums,userData);
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  return <div className="flex items-center justify-center h-full">
-  
-    {/* show the data */}
-    <UserCard userData={userData} />
-  </div>;
+  return <div>Users</div>;
 }
 
 export default Users;
