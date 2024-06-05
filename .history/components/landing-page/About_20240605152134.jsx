@@ -11,27 +11,30 @@ const features = [
   {
     title: "Album Management",
     description:
-      "An organized  photo album. All in one collection. Easy to manage and share.",
-    image: "./album.png",
+      "Easily create, edit, and organize your photo albums. Keep your memories well-arranged and accessible.",
+    image: "https://placehold.co/1024x480",
   },
   {
-    title: "User management",
-    description: "Enabled User Authentication and Access",
-    image: "./auth.png",
-  },
-  {
-    title: "Filtered Results",
+    title: "User Profiles",
     description:
-      "Search for album. Find what you're looking for quickly and easily.",
-    image: "./search.png",
+      "Manage user profiles with ease. View and edit user details, and keep track of user activities.",
+    image: "https://placehold.co/1024x480",
+  },
+  {
+    title: "AI-Powered Photo Insights",
+    description:
+      "Leverage AI to gain insights into your photos. Automatically categorize and tag photos for easy retrieval.",
+    image: "https://placehold.co/1024x480",
   },
 ];
 
 const featureList = [
   "Dark/Light Theme",
+  "User Reviews",
   "Advanced Search",
   "Responsive Design",
   "Secure Authentication",
+  "Team Collaboration",
   "Real-time Updates",
   "Newsletter Integration",
   "Minimalist Design",
@@ -41,6 +44,7 @@ export const About = () => {
   return (
     <section id="features" className="container py-4 sm:py-6 space-y-8">
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
+       
         What makes {""}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           it Intresting?

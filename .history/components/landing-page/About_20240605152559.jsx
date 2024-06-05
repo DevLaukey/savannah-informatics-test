@@ -23,7 +23,7 @@ const features = [
     title: "Filtered Results",
     description:
       "Search for album. Find what you're looking for quickly and easily.",
-    image: "./search.png",
+    image: "https://placehold.co/1024x480",
   },
 ];
 
