@@ -43,10 +43,9 @@ function Home() {
 
   return (
     <div className="flex flex-col justify-center items-center mt-10 mx-4">
-      <h1 className="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white mb-3">
+      <h1 class="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white">
         Users and their Albums
       </h1>
-      <h5 className="text-xl  mb-3 font-semibold">To view more, click on a user</h5>
 
       <UsersDataTable users={users} albums={albums} />
     </div>

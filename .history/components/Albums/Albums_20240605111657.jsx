@@ -46,7 +46,7 @@ function Home() {
       <h1 className="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white mb-3">
         Users and their Albums
       </h1>
-      <h5 className="text-xl  mb-3 font-semibold">To view more, click on a user</h5>
+      <h5 className="text-xl  mb-3">To view more, click on one user</h5>
 
       <UsersDataTable users={users} albums={albums} />
     </div>

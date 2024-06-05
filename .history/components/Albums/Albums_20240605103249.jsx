@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect } from "react";
 import UsersDataTable from "./UsersDataTable";
@@ -40,15 +40,26 @@ function Home() {
     return <div>Loading...</div>;
   }
 
+  const getAlbumsCount = (userId) => {
+    return albums.filter((album) => album.userId === userId).length;
+  };
 
   return (
     <div className="flex flex-col justify-center items-center mt-10 mx-4">
-      <h1 className="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white mb-3">
+      <h1 class="max-w-lg text-3xl font-semibold leading-normal text-gray-900 dark:text-white">
         Users and their Albums
       </h1>
-      <h5 className="text-xl  mb-3 font-semibold">To view more, click on a user</h5>
+     \
 
-      <UsersDataTable users={users} albums={albums} />
+      {/* map through the users and get the count */}
+      <UsersDataTable />
+      {/* <ul>
+        {users.map((user) => (
+          <li key={user.id}>
+            {user.name} has {getAlbumsCount(user.id)} albums
+          </li>
+        ))}
+      </ul> */}
     </div>
   );
 }
