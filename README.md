@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Album & User Management System
 
-## Getting Started
+This is a web application built with Next.js and Tailwind CSS that allows users to manage albums and user profiles. The application includes features such as responsive design, user authentication, and AI-powered photo insights.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Components](#components)
+- [Pages](#pages)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Responsive Design
+- Intuitive User Interface
+- AI-Powered Photo Insights
+- Dark/Light Theme
+- User Reviews
+- Advanced Search
+- Secure Authentication
+- Team Collaboration
+- Real-time Updates
+- Newsletter Integration
+- Minimalist Design
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- Next.js
+- Tailwind CSS
+- Jest
+- React Testing Library
+- @kinde-oss/kinde-auth-nextjs for authentication
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- components
+  - Albums.js
+  - Footer.js
+  - Hero.js
+  - Navbar.js
+  - PhotoCard.js
+  - ScrollToTop.js
+  - UserCard.js
+  - ui
+    - button.js
+    - input.js
+    - navigation-menu.js
+    - sheet.js
+- pages
+  - index.js (Landing + Login)
+  - home.js (Home)
+  - user
+    - [id].js (User)
+  - album
+    - [id].js (Album)
+  - photo
+    - [id].js (Photo)
+- tests
+  - PhotoCard.test.js
+  - Photo.test.js
+- jest.config.js
+- jest.setup.js
+- .babelrc
+- README.md
 
-## Deploy on Vercel
+## Components
+- Hero.js
+Provides a brief explanation of the application's purpose with a visually appealing design.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Navbar.js
+Renders the navigation menu with options for login, registration, and logout based on the user's authentication status.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- PhotoCard.js
+Displays individual photo cards with optimized image handling using the next/image component.
+
+- UserCard.js
+Shows user information and album count.
+
+- Albums.js
+Lists all albums for the authenticated user.
+
+- Footer.js
+Renders the footer of the application.
+
+- ScrollToTop.js
+Provides a button to scroll back to the top of the page.
+
+- ui/button.js, ui/input.js, ui/navigation-menu.js, ui/sheet.js
+Custom UI components using Tailwind CSS.
+
+## Pages
+- page.js
+Landing and login page combined. Displays a hero section, about section, and footer. Redirects authenticated users to the Albums component.
+
+- users/page.js
+Lists all users and their albums. Fetches user data and album data from the JSONPlaceholder API and displays it using the UserCard component.
+
+- user/[id].js
+Displays details of a specific user and their albums. Fetches user data and album data for the selected user from the JSONPlaceholder API.
+
+- album/[id].js
+Displays details of a specific album and its photos. Fetches album data and photo data for the selected album from the JSONPlaceholder API.
+
+- photo/[id].js
+Displays a specific photo and allows the user to edit its title. Fetches photo data from the JSONPlaceholder API and provides an input field for editing the title.
