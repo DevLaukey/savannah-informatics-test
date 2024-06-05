@@ -16,7 +16,7 @@ const Photos = () => {
   const [photosPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // when the component mounts or the ID changes
+  // useEffect hook to fetch photos when the component mounts or the ID changes
   useEffect(() => {
     const fetchPhotos = async () => {
       try {

@@ -13,7 +13,6 @@ import {
 import Link from "next/link";
 
 export default function UserCard({ userData }) {
-  // Destructure the user data
   const { name, phone, email, username, website, address, company } = userData;
   return (
     <Card className="w-ful mt-10 mx-auto px-2">

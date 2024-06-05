@@ -15,10 +15,12 @@ export default async function handler(req, res) {
     // Parse the response as JSON.
     const albums = await response.json();
 
+    // Log the albums to the console for debugging purposes.
+    console.log(albums);
+
     // Respond to the client with the fetched albums and a 200 OK status.
     res.status(200).json(albums);
   } catch (error) {
-    
     // If an error occurs, log it and respond with a 500 Internal Server Error status.
     console.error("Error fetching albums:", error);
     res.status(500).json({ error: "Failed to fetch albums" });

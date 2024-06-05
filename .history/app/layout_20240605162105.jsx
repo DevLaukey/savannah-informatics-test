@@ -13,8 +13,7 @@ const fontSans = FontSans({
 });
 
 export default async function RootLayout({ children }) {
-  // get the user information from KindeServerSession
-  const { getUser } = getKindeServerSession();
+   const { getUser } = getKindeServerSession();
   const user = await getUser();
   return (
     <html lang="en" suppressHydrationWarning>

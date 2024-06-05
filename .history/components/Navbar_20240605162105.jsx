@@ -16,6 +16,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { ChevronRight, LogOut, Menu } from "lucide-react";
 import ModeToggle from "@/components/mode-toggle";
 import { LogoIcon } from "@/components/Icons";
+import { useRouter } from "next/navigation";
 import {
   RegisterLink,
   LoginLink,
@@ -35,6 +36,7 @@ const routeList = [
 
 const Navbar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigation = useRouter();
 
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">

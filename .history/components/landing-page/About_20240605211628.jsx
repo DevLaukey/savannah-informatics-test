@@ -51,7 +51,6 @@ export const About = () => {
         </span>
       </h2>
 
-      {/* Display additional features as badges */}
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature) => (
           <div key={feature}>
@@ -62,7 +61,6 @@ export const About = () => {
         ))}
       </div>
 
-      {/* Display main features as cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }) => (
           <Card key={title}>

@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const Photo = () => {
-  // Get the photo ID from the URL parameters
   const { id } = useParams();
-
   const [photo, setPhoto] = useState(null);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
@@ -17,13 +15,10 @@ const Photo = () => {
   useEffect(() => {
     const fetchPhoto = async () => {
       try {
-        // Fetch photo data from the API
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/photos/${id}`
         );
         const data = await response.json();
-
-        // Set the photo data and new title, and mark loading as false
         setPhoto(data);
         setNewTitle(data.title);
         setLoading(false);
@@ -35,10 +30,8 @@ const Photo = () => {
     fetchPhoto();
   }, [id]);
 
-  // Function to handle editing the photo title
   const handleEdit = async () => {
     try {
-      // Send a PATCH request to update the photo title
       const response = await fetch(
         `https://jsonplaceholder.typicode.com/photos/${id}`,
         {
@@ -51,7 +44,6 @@ const Photo = () => {
       );
 
       if (response.ok) {
-        // Update the photo data with the new title
         const updatedPhoto = await response.json();
         setPhoto(updatedPhoto);
         setEditing(false);
@@ -63,7 +55,6 @@ const Photo = () => {
     }
   };
 
-  // Show loading message while the data is being fetched
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -73,7 +64,6 @@ const Photo = () => {
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-4">
           {editing ? (
-            // Show input field and save button when editing
             <div className="flex items-center">
               <Input
                 value={newTitle}
@@ -83,7 +73,6 @@ const Photo = () => {
               <Button onClick={handleEdit}>Save</Button>
             </div>
           ) : (
-            // Show photo title and edit button when not editing
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-semibold text-gray-800">
                 {photo.title}
@@ -94,7 +83,6 @@ const Photo = () => {
             </div>
           )}
         </div>
-        {/* Display the photo */}
         <Image
           src={photo.url}
           alt={photo.title}

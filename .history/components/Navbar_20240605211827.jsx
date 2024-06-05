@@ -16,6 +16,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { ChevronRight, LogOut, Menu } from "lucide-react";
 import ModeToggle from "@/components/mode-toggle";
 import { LogoIcon } from "@/components/Icons";
+import { useRouter } from "next/navigation";
 import {
   RegisterLink,
   LoginLink,

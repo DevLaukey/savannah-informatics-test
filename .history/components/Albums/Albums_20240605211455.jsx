@@ -5,15 +5,14 @@ import UsersDataTable from "./UsersDataTable";
 
 // Albums component to display users and their albums
 function Albums() {
-
-
+  // State variables to manage users, albums, and loading state
   const [users, setUsers] = useState([]);
 
   const [albums, setAlbums] = useState([]);
 
   const [loading, setLoading] = useState(true);
 
-  // Fetch users and albums data when the component mounts
+  // useEffect hook to fetch users and albums data when the component mounts
   useEffect(() => {
     const fetchUsers = async () => {
       try {

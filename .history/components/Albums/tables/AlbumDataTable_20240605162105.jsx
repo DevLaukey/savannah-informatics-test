@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import {
+  ColumnDef,
   useReactTable,
   getCoreRowModel,
   getPaginationRowModel,
@@ -22,7 +23,6 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-// Define the column structure for the table
 const columns = [
   {
     accessorKey: "title",
@@ -41,11 +41,9 @@ const columns = [
   },
 ];
 
-// AlbumsTable component to display albums in a table with sorting, filtering, and pagination features
 const AlbumsTable = ({ data }) => {
   const router = useRouter();
 
-  // Initialize the table with provided data and column definitions
   const table = useReactTable({
     data,
     columns,
@@ -60,7 +58,6 @@ const AlbumsTable = ({ data }) => {
     },
   });
 
-  // Handle row click to navigate to the album's photo page
   const handleRowClick = (id) => {
     router.push(`/photos/${id}`);
   };
@@ -139,28 +136,11 @@ const AlbumsTable = ({ data }) => {
         >
           Previous
         </Button>
-        {Array.from({
-          length: Math.ceil(
-            table.getFilteredRowModel().rows.length /
-              table.getState().pagination.pageSize
-          ),
-        }).map((_, index) => (
-          <Button
-            key={index + 1}
-            variant="outline"
-            size="sm"
-            onClick={() => paginate(index + 1)}
-            className="mx-1"
-          >
-            {index + 1}
-          </Button>
-        ))}
         <Button
           variant="outline"
           size="sm"
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
-          className="mx-1"
         >
           Next
         </Button>

@@ -1,6 +1,5 @@
 const Hero = () => {
   return (
-    
     <section id="hero" className="relative overflow-hidden pt-14 lg:pt-20">
       <div className="container">
         <div className="max-w-2xl text-center mx-auto">

@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 const HomePage = ({ users, albums }) => {
-
-  // Check the albums with the same user id, then gets the count of albums
   const getAlbumsCount = (userId, albums) => {
     return albums.filter((album) => album.userId === userId).length;
   };

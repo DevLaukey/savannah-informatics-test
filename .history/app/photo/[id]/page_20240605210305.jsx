@@ -5,15 +5,18 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+// Photo component to display and edit a photo's title
 const Photo = () => {
   // Get the photo ID from the URL parameters
   const { id } = useParams();
 
+  // State variables to manage photo data, loading state, editing state, and new title
   const [photo, setPhoto] = useState(null);
   const [loading, setLoading] = useState(true);
   const [editing, setEditing] = useState(false);
   const [newTitle, setNewTitle] = useState("");
 
+  // useEffect hook to fetch photo data when the component mounts or the ID changes
   useEffect(() => {
     const fetchPhoto = async () => {
       try {

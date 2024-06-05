@@ -5,28 +5,21 @@ import PhotoCard from "@/components/PhotoCard";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
-// Photos component to display and manage photos in an album
 const Photos = () => {
-  // Get the album ID from the URL parameters
   const { id } = useParams();
-
   const [photos, setPhotos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [photosPerPage] = useState(10);
   const [searchQuery, setSearchQuery] = useState("");
 
-  // when the component mounts or the ID changes
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        // Fetch photos data from the API
         const response = await fetch(
           `https://jsonplaceholder.typicode.com/albums/${id}/photos`
         );
         const data = await response.json();
-
-        // Set the photos data and mark loading as false
         setPhotos(data);
         setLoading(false);
       } catch (error) {
@@ -37,7 +30,6 @@ const Photos = () => {
     fetchPhotos();
   }, [id]);
 
-  // Show loading message while the data is being fetched
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -47,7 +39,7 @@ const Photos = () => {
     photo.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  // Get the current photos to be displayed on the current page
+  // Get current photos
   const indexOfLastPhoto = currentPage * photosPerPage;
   const indexOfFirstPhoto = indexOfLastPhoto - photosPerPage;
   const currentPhotos = filteredPhotos.slice(
@@ -55,7 +47,7 @@ const Photos = () => {
     indexOfLastPhoto
   );
 
-  // Change the current page
+  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -73,15 +65,11 @@ const Photos = () => {
           />
         </div>
       </div>
-
-      {/* Display the photos in a grid layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {currentPhotos.map((photo) => (
           <PhotoCard key={photo.id} photo={photo} />
         ))}
       </div>
-
-      {/* Pagination buttons */}
       <div className="flex justify-center mt-8">
         <Button
           variant="outline"

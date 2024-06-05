@@ -13,7 +13,7 @@ function Albums() {
 
   const [loading, setLoading] = useState(true);
 
-  // Fetch users and albums data when the component mounts
+  // useEffect hook to fetch users and albums data when the component mounts
   useEffect(() => {
     const fetchUsers = async () => {
       try {

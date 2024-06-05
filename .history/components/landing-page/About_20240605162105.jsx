@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-// List of features with their title, description, and image path
 const features = [
   {
     title: "Album Management",
@@ -28,8 +27,6 @@ const features = [
   },
 ];
 
-
-// List of additional features
 const featureList = [
   "Dark/Light Theme",
   "Advanced Search",
@@ -40,7 +37,6 @@ const featureList = [
   "Minimalist Design",
 ];
 
-// About component to display the features of the application
 export const About = () => {
   return (
     <section id="features" className="container py-4 sm:py-6 space-y-8">
@@ -51,7 +47,6 @@ export const About = () => {
         </span>
       </h2>
 
-      {/* Display additional features as badges */}
       <div className="flex flex-wrap md:justify-center gap-4">
         {featureList.map((feature) => (
           <div key={feature}>
@@ -62,7 +57,6 @@ export const About = () => {
         ))}
       </div>
 
-      {/* Display main features as cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }) => (
           <Card key={title}>
