@@ -9,15 +9,17 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
 export default function UserCard({ userData }) {
   const { name, phone, email, username, website, address, company } = userData;
+  console.log("UserCard", name, phone, username, website, address, company);
   return (
     <Card className="w-1/3 mt-10 mx-auto px-2">
-      <CardHeader>
-        <CardTitle className="font-bold text-black dark:text-white mb-1 text-3xl">
+      <CardHeader className="text-3xl">
+        <CardTitle>
           {name} {""}({username})
         </CardTitle>
         <CardDescription>
@@ -35,10 +37,29 @@ export default function UserCard({ userData }) {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex  flex-col gap-2 w-full items-start justify-start">
+        <div class="max-w-sm bg-white shadow-lg rounded-lg overflow-hidden my-4">
+          <div className="flex  flex-col gap-2 w-full items-start justify-start">
+            <h5 className="text-2xl font-semibold underline underline-offset-2 ">
+              Company Details
+            </h5>
+
+            <div className="font-semibold">
+              <div className="flex gap-2">
+                <p className="text-gray-700 text-xl"> {company.name} </p>
+              </div>
+              <div className="flex gap-2">
+                <p className="text-gray-600 text-base">
+                  {company.catchPhrase}{" "}
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <p className="text-gray-500 text-sm">{company.bs}</p>
+              </div>
+            </div>
+          </div>
           <div>
             <h3 class="font-bold text-xl text-gray-800 dark:text-white mb-1">
-              {address.city}
+              Cait Genevieve
             </h3>
             <div class="inline-flex text-gray-700 dark:text-gray-300 items-center">
               <svg
@@ -54,24 +75,7 @@ export default function UserCard({ userData }) {
                   d="M5.64 16.36a9 9 0 1 1 12.72 0l-5.65 5.66a1 1 0 0 1-1.42 0l-5.65-5.66zm11.31-1.41a7 7 0 1 0-9.9 0L12 19.9l4.95-4.95zM12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
                 />
               </svg>
-              {address.street}
-            </div>
-          </div>
-          <div className="font-semibold">
-            <div className="   gap-3">
-              <h2 className="underline underline-offset-2 text-gray-400 ">
-                Company Details
-              </h2>
-
-              <p className="font-bold text-gray-800 dark:text-white mb-1 text-2xl">
-                {" "}
-                {company.name}{" "}
-              </p>
-              <p className="text-gray-600 text-base">({company.catchPhrase})</p>
-            </div>
-
-            <div className="flex gap-2">
-              <p className="text-gray-500 text-sm">{company.bs}</p>
+              New York, NY
             </div>
           </div>
         </div>

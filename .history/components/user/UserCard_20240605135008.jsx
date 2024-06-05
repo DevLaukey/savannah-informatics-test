@@ -9,11 +9,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
 export default function UserCard({ userData }) {
   const { name, phone, email, username, website, address, company } = userData;
+  console.log("UserCard", name, phone, username, website, address, company);
   return (
     <Card className="w-1/3 mt-10 mx-auto px-2">
       <CardHeader>
@@ -57,22 +59,24 @@ export default function UserCard({ userData }) {
               {address.street}
             </div>
           </div>
-          <div className="font-semibold">
-            <div className="   gap-3">
-              <h2 className="underline underline-offset-2 text-gray-400 ">
-                Company Details
-              </h2>
+            < className="font-semibold">
+              <div className="   gap-3">
+                <h2 className="underline underline-offset-2 ">
+                  Company Details
+                </h2>
 
-              <p className="font-bold text-gray-800 dark:text-white mb-1 text-2xl">
-                {" "}
-                {company.name}{" "}
-              </p>
-              <p className="text-gray-600 text-base">({company.catchPhrase})</p>
-            </div>
+                <p className="font-bold text-gray-800 dark:text-white mb-1 text-2xl">
+                  {" "}
+                  {company.name}{" "}
+                </p>
+                <p className="text-gray-600 text-base">
+                  ({company.catchPhrase})
+                </p>
+              </div>
 
-            <div className="flex gap-2">
-              <p className="text-gray-500 text-sm">{company.bs}</p>
-            </div>
+              <div className="flex gap-2">
+                <p className="text-gray-500 text-sm">{company.bs}</p>
+              </div>
           </div>
         </div>
       </CardContent>

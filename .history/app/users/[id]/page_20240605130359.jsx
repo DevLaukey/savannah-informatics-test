@@ -25,7 +25,7 @@ function Users() {
     const fetchAlbums = async () => {
       try {
         const albumsResponse = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${id}/albums`
+          `https://jsonplaceholder.typicode.com/${id}/albums`
         );
         const albumsData = await albumsResponse.json();
         setAlbums(albumsData);
@@ -37,7 +37,7 @@ function Users() {
     Promise.all([fetchUser(), fetchAlbums()]).then(() => setLoading(false));
   }, []);
 
-  console.log("Loading",albums);
+  console.log("Loading",userData);
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -45,7 +45,7 @@ function Users() {
   return <div className="flex items-center justify-center h-full">
   
     {/* show the data */}
-    <UserCard userData={userData} albums={albums} />
+    <UserCard userData={userData} />
   </div>;
 }
 

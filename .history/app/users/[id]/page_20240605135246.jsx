@@ -45,7 +45,7 @@ function Users() {
   return <div className="flex items-center justify-center h-full">
   
     {/* show the data */}
-    <UserCard userData={userData} albums={albums} />
+    <UserCard userData={userData} />
   </div>;
 }
 

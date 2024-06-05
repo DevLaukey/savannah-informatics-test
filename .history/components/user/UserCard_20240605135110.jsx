@@ -9,11 +9,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
 export default function UserCard({ userData }) {
   const { name, phone, email, username, website, address, company } = userData;
+  console.log("UserCard", name, phone, username, website, address, company);
   return (
     <Card className="w-1/3 mt-10 mx-auto px-2">
       <CardHeader>
