@@ -28,7 +28,7 @@ export default function UserCard({ userData }) {
           </p>
           <Link
             class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
-            href={`https://${website}`}
+            href="website"
           >
             {website}
           </Link>

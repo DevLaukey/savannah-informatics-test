@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ChevronRight, LogOut, Menu } from "lucide-react";
+import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "@/components/mode-toggle";
 import { LogoIcon } from "@/components/Icons";
 import { useRouter } from "next/navigation";

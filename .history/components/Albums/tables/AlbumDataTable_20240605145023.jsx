@@ -64,10 +64,6 @@ const AlbumsTable = ({ data }) => {
 
   return (
     <div className="max-w-lg">
-      <p className="mb-2 font-medium text-xl">
-        Click on a title to see the album
-      </p>
-
       <div className="flex items-center py-4">
         <Input
           placeholder="Filter titles..."
@@ -76,8 +72,9 @@ const AlbumsTable = ({ data }) => {
             table.getColumn("title")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
-        />
+              />
       </div>
+              <p className="mb-2 font-medium text-xl">Click on a title to see the album</p>
       <div className="rounded-md border">
         <Table>
           <TableHeader>

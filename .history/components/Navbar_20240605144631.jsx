@@ -13,7 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { ChevronRight, LogOut, Menu } from "lucide-react";
+import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "@/components/mode-toggle";
 import { LogoIcon } from "@/components/Icons";
 import { useRouter } from "next/navigation";
@@ -126,9 +126,7 @@ const Navbar = ({ user }) => {
 
           <div className="hidden md:flex items-center justify-center gap-2">
             {user ? (
-              <LogoutLink className="flex gap-2 items-center justify-center">
-                Log out <LogOut />
-              </LogoutLink>
+              <LogoutLink>Log out</LogoutLink>
             ) : (
               <>
                 <LoginLink>
