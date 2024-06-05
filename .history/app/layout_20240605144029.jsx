@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/lib/theme-provider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
 const fontSans = FontSans({
   subsets: ["latin"],

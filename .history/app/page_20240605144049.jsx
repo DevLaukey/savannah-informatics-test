@@ -14,8 +14,9 @@ export default async function Home() {
     // check if the user is empty
     <div>
       {user ? (
-        // if the user is not empty, show the albums
-        <Albums />
+        // if the user is not empty, show the dashboard
+          <Albums />
+    
       ) : (
         // if the user is empty, show the landing page
         <>
