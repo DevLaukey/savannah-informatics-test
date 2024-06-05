@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">
             <img
-              src="./screenshot.png"
+              src="https://placehold.co/1024x480"
               className="rounded-xl"
               alt="Image Description"
             />

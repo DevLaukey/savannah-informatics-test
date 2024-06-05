@@ -12,18 +12,18 @@ const features = [
     title: "Album Management",
     description:
       "An organized  photo album. All in one collection. Easy to manage and share.",
-    image: "./album.png",
+    image: "https://placehold.co/1024x480",
   },
   {
     title: "User management",
     description: "Enabled User Authentication and Access",
-    image: "./auth.png",
+    image: "https://placehold.co/1024x480",
   },
   {
     title: "Filtered Results",
     description:
       "Search for album. Find what you're looking for quickly and easily.",
-    image: "./search.png",
+    image: "https://placehold.co/1024x480",
   },
 ];
 

@@ -1,3 +1,5 @@
+import { Image } from "next/image";
+
 const Hero = () => {
   return (
     <>
@@ -26,9 +28,11 @@ const Hero = () => {
             </p>
           </div>
           <div className="mt-10 relative max-w-5xl mx-auto">
-            <img
-              src="./screenshot.png"
+            <Image
+              src="https://placehold.co/1024x480"
               className="rounded-xl"
+              width={300}
+              height={300}
               alt="Image Description"
             />
             <div className="absolute bottom-12 -start-20 -z-[1] w-48 h-48 bg-gradient-to-b from-primary-foreground via-primary-foreground to-background p-px rounded-lg">
