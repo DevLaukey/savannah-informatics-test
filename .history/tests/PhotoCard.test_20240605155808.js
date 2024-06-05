@@ -1,6 +1,8 @@
+// tests/PhotoCard.test.js
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import PhotoCard from "@/components/PhotoCard"; 
+
+import PhotoCard from "@/components/PhotoCard";
 
 const photo = {
   id: 1,

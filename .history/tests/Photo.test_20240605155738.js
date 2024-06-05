@@ -1,8 +1,7 @@
 import React from "react";
 import { render, screen, waitFor, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { useRouter } from "next/router";
-import Photo from "@/app/photo/[id]";
+import Photo from "@/app/photo/[id]/page"; 
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),
