@@ -64,7 +64,7 @@ const Photo = () => {
         <img
           src={photo.url}
           alt={photo.title}
-          className="w-auto h-64  object-cover"
+          className="w-full h-64 object-cover"
         />
         <div className="p-4">
           {editing ? (

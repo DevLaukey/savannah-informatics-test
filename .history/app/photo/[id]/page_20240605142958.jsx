@@ -59,12 +59,12 @@ const Photo = () => {
   }
 
   return (
-    <div className="h-full p-12">
+    <div className="h-screen p-12">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
         <img
           src={photo.url}
           alt={photo.title}
-          className="w-auto h-64  object-cover"
+          className="w-full h-64 object-cover"
         />
         <div className="p-4">
           {editing ? (

@@ -64,7 +64,7 @@ const AlbumsTable = ({ data }) => {
 
   return (
     <div className="max-w-lg">
-      <div className="flex items-center py-4">
+      <div className="flex items-center pb-4">
         <Input
           placeholder="Filter titles..."
           value={table.getColumn("title")?.getFilterValue() ?? ""}

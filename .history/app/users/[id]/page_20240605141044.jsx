@@ -46,7 +46,7 @@ function Users() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
       {/* User Card */}
-      <div className="container mx-auto sm:flex sm:flex-row sm:items-center sm:justify-center sm:space-x-4">
+      <div className="container mx-auto pt-4 sm:flex sm:flex-row sm:items-center sm:justify-center sm:space-x-4">
         <div className="flex flex-col items-center sm:w-1/3">
           <UserCard userData={userData} />
         </div>
