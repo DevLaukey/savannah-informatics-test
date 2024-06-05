@@ -38,24 +38,17 @@ function Users() {
     Promise.all([fetchUser(), fetchAlbums()]).then(() => setLoading(false));
   }, []);
 
-  console.log("Loading", albums);
+  console.log("Loading",albums);
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      {/* User Card */}
-      <div className="container mx-auto pt-4 sm:flex sm:flex-row sm:items-center sm:justify-center sm:space-x-4">
-        <div className="flex flex-col items-center sm:w-1/3">
-          <UserCard userData={userData} />
-        </div>
-        <div className="flex flex-col items-center sm:w-2/3">
-          <AlbumsTable data={albums} />
-        </div>
-      </div>
-    </div>
-  );
+  return <div className="w-full flex items-center justify-center h-full">
+  
+    {/* show the data */}
+    <UserCard userData={userData}  />
+    <AlbumsTable data={albums} />
+  </div>;
 }
 
 export default Users;
