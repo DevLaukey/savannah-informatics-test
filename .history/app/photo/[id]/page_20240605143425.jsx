@@ -1,8 +1,8 @@
 "use client";
 import { useParams } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input"; 
+import { Button } from "@/components/ui/button"; 
 
 const Photo = () => {
   const { id } = useParams();
@@ -61,6 +61,11 @@ const Photo = () => {
   return (
     <div className="h-screen p-12">
       <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img
+          src={photo.url}
+          alt={photo.title}
+          className="w-full h-1/4    object-cover"
+        />
         <div className="p-4">
           {editing ? (
             <div className="flex items-center">
@@ -82,11 +87,6 @@ const Photo = () => {
             </div>
           )}
         </div>
-        <img
-          src={photo.url}
-          alt={photo.title}
-          className="w-full h-[600px] object-cover"
-        />
       </div>
     </div>
   );
