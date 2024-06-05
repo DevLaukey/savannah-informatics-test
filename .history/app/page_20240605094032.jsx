@@ -16,13 +16,11 @@ export default async function Home() {
     <div>
       {user ? (
         // if the user is not empty, show the dashboard
-        <>
-          <Navbar />
-          <Albums />
-        </>
+        <Albums />
       ) : (
         // if the user is empty, show the landing page
         <>
+          <Navbar />
           <Hero />
           <About />
           <Footer />

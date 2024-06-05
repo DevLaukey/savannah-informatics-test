@@ -17,8 +17,9 @@ export default async function Home() {
       {user ? (
         // if the user is not empty, show the dashboard
         <>
-          <Navbar />
-          <Albums />
+        
+        <Navbar />
+        <Albums />
         </>
       ) : (
         // if the user is empty, show the landing page

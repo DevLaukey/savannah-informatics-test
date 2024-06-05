@@ -17,7 +17,6 @@ import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 import { useRouter } from "next/navigation";
-import { RegisterLink , LoginLink} from "@kinde-oss/kinde-auth-nextjs";
 
 const routeList = [
   {
@@ -28,6 +27,7 @@ const routeList = [
     href: "#features",
     label: "Features",
   },
+
 ];
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
   const navigation = useRouter();
   const navToLogin = () => {
     navigation.push("/auth");
-  };
+  }
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
@@ -85,6 +85,7 @@ const Navbar = () => {
                     </a>
                   ))}
                   <LoginLink>
+                 
                     <Button>
                       Get Started
                       <ChevronRight className="mr-2 h-4 w-4" />
@@ -112,12 +113,10 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <RegisterLink>
-              <Button>
-                Get Started
-                <ChevronRight className="mr-2 h-4 w-4" />
-              </Button>
-            </RegisterLink>
+            <Button onClick={navToLogin}>
+              Get Started
+              <ChevronRight className="mr-2 h-4 w-4" />
+            </Button>
             <ModeToggle />
           </div>
         </NavigationMenuList>
