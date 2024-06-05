@@ -3,7 +3,6 @@ import { useParams } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 const Photo = () => {
   const { id } = useParams();
