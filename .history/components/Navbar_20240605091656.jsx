@@ -17,7 +17,7 @@ import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 import { useRouter } from "next/navigation";
-import { RegisterLink , LoginLink} from "@kinde-oss/kinde-auth-nextjs";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs";
 
 const routeList = [
   {
@@ -112,12 +112,12 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:flex gap-2">
-            <RegisterLink>
+            <LoginLink>
               <Button>
                 Get Started
                 <ChevronRight className="mr-2 h-4 w-4" />
               </Button>
-            </RegisterLink>
+            </LoginLink>
             <ModeToggle />
           </div>
         </NavigationMenuList>

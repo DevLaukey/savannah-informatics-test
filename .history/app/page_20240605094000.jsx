@@ -6,19 +6,20 @@ import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 
+
 // this is the landing page
 export default async function Home() {
   const { getUser } = getKindeServerSession();
-  const user = await getUser();
+    const user = await getUser();
 
   return (
     // check if the user is empty
+    // if the user is empty, show the landing page
+    // if the user is not empty, show the dashboard
     <div>
       {user ? (
-        // if the user is not empty, show the dashboard
         <Albums />
       ) : (
-        // if the user is empty, show the landing page
         <>
           <Navbar />
           <Hero />

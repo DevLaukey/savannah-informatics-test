@@ -17,7 +17,7 @@ import { ChevronRight, Menu } from "lucide-react";
 import ModeToggle from "./mode-toggle";
 import { LogoIcon } from "./Icons";
 import { useRouter } from "next/navigation";
-import { RegisterLink , LoginLink} from "@kinde-oss/kinde-auth-nextjs";
+import { RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 
 const routeList = [
   {
